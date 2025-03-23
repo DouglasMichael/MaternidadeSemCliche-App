@@ -1,0 +1,33 @@
+import { Text, View } from "react-native";
+import { Input } from "../Components/Input";
+import { Button } from "../Components/Button";
+import { Or } from "../Components/Or";
+import { SocialMedia } from "../Components/SocialMedia";
+
+export function Login() {
+  return (
+    <View className="flex-1 bg-[#F5EBE0] justify-center">
+
+      <View className="items-center mb-12">
+        <Text className="font-bold text-2xl text-[#ed967d]">Welcome Back</Text>
+        <Text className="font-medium text-xl text-[#70bac2]">Login to continue</Text>
+      </View>
+
+      <View className="px-6 h-60 justify-evenly">
+        <View className="gap-4">
+          <Text className="text-[#ed967d]">Email</Text>
+          <Input />
+          <Text className="text-[#ed967d]">Password</Text>
+          <Input secureTextEntry />
+        </View>
+
+        <View className="my-12">
+            <Button label="Login" size="lg"/>
+        </View>
+
+        <Or/>
+        <SocialMedia/>
+      </View>
+    </View>
+  );
+}
