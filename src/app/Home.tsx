@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  ScrollView,
   Text,
   TouchableOpacity,
   View,
@@ -9,8 +10,8 @@ import { Avatar, AvatarImage } from "../Components/Avatar";
 
 export function Home() {
   return (
-    <View className="flex-1 bg-[#F5EBE0] ">
-      <View className="pt-10 flex-row justify-around mb-14">
+    <ScrollView className="flex-1 bg-[#F5EBE0] ">
+      <View className="pt-10 flex-row justify-around mb-10">
         <Image
           source={require("../assets/Logo 3.png")}
           resizeMode="contain"
@@ -76,6 +77,6 @@ export function Home() {
           </View>
         </TouchableOpacity>
       </View>
-    </View>
+    </ScrollView>
   );
 }
