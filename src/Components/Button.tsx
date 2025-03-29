@@ -9,6 +9,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 'bg-[#ed967d]',
+        secondary: 'bg-[#70BAC2]',
       },
       size: {
         default: 'h-12 px-4',
@@ -27,6 +28,7 @@ const buttonTextVariants = cva('text-center font-medium', {
   variants: {
     variant: {
       default: 'text-[#f5ebe0]',
+      secondary: 'text-secondary-foreground',
     },
     size: {
       default: 'text-base',
