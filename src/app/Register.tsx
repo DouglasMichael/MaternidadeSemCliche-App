@@ -1,7 +1,7 @@
 import { Image, ScrollView, Text, View } from "react-native";
 import { Input } from "../Components/Input";
 import { Button } from "../Components/Button";
-import { Or } from "../Components/Or";
+import { Divider } from "../Components/Divider";
 import { SocialMedia } from "../Components/SocialMedia";
 
 export function Register() {
@@ -42,7 +42,7 @@ export function Register() {
           <Button label="Cadastar" size="lg" />
         </View>
 
-        <Or />
+        <Divider label="ou" />
         <SocialMedia />
       </View>
     </ScrollView>

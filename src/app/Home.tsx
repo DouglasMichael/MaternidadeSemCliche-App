@@ -45,7 +45,7 @@ export function Home() {
           <View className="w-1/2 items-center justify-center">
             <ImageBackground
               source={require("../assets/Card2.png")}
-              resizeMode="contain"
+              resizeMode="cover"
               className="flex-1 w-full rounded-l-3xl"
             />
           </View>

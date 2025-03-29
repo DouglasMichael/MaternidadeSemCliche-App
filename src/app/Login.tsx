@@ -1,7 +1,7 @@
 import { Image, ScrollView, Text, View } from "react-native";
 import { Input } from "../Components/Input";
 import { Button } from "../Components/Button";
-import { Or } from "../Components/Or";
+import { Divider } from "../Components/Divider";
 import { SocialMedia } from "../Components/SocialMedia";
 
 export function Login() {
@@ -28,7 +28,7 @@ export function Login() {
             <Button label="Entrar" size="lg"/>
         </View>
 
-        <Or/>
+        <Divider label="Ou"/>
         <SocialMedia/>
       </View>
     </ScrollView>

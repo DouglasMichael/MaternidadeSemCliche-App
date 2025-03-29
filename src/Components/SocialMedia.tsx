@@ -2,7 +2,7 @@ import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export function SocialMedia(){
     return(
-        <View className="my-2">
+        <View className="mb-5">
             <Text className="font-semibold text-xl text-center text-[#70bac2]">Participe das nossas comunidades:</Text>
 
             <View className="px-16 flex-row justify-around mt-7">

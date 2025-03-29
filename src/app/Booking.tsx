@@ -4,26 +4,13 @@ import { Input } from "../Components/Input";
 import { Calendar } from "react-native-calendars";
 import { SetStateAction, useState } from "react";
 import { Button } from "../Components/Button";
+import { Header } from "../Components/Header";
 
 export function Booking() {
   const [selected, setSelected] = useState("");
   return (
     <ScrollView className="flex-1 bg-[#ED967D]">
-      <View className="pt-3 flex-row items-center justify-around mb-10">
-        <Image
-          source={require("../assets/Logo 4.png")}
-          resizeMode="contain"
-          className="w-[80%]"
-        />
-        <Avatar>
-          <AvatarImage
-            source={{
-              uri: "https://pbs.twimg.com/profile_images/1745949238519803904/ZHwM5B07_400x400.jpg",
-            }}
-          />
-        </Avatar>
-      </View>
-
+      <Header/>
       <View className="items-center mb-6">
         <Text className="text-white font-semibold">
           Agendamento de consultas
