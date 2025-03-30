@@ -1,10 +1,12 @@
-import { Image, ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { Input } from "../Components/Input";
 import { Button } from "../Components/Button";
 import { Divider } from "../Components/Divider";
 import { SocialMedia } from "../Components/SocialMedia";
+import { EnterWith } from "@/Components/Enterwith";
+import { PropsScreensApp } from "@/routes/interface";
 
-export function Register() {
+export function Register({navigation}: PropsScreensApp<"Register">) {
   return (
     <ScrollView className="flex-1 bg-[#F5EBE0]">
       <View className="pt-7 items-center">
@@ -24,27 +26,30 @@ export function Register() {
         </Text>
       </View>
 
-      <View className="px-6 h-60 justify-evenly">
+      <View className="px-6 justify-evenly">
         <View className="gap-3">
           <Text className="text-[#ed967d]">Nome Completo</Text>
-          <Input />
+          <Input className="border-[#ed967d]" />
           <Text className="text-[#ed967d]">Tel(DDD)</Text>
-          <Input />
+          <Input className="border-[#ed967d]" />
           <Text className="text-[#ed967d]">Email</Text>
-          <Input />
+          <Input className="border-[#ed967d]" />
           <Text className="text-[#ed967d]">Senha</Text>
-          <Input secureTextEntry />
+          <Input className="border-[#ed967d]" secureTextEntry />
           <Text className="text-[#ed967d]">Confirmar Senha</Text>
-          <Input secureTextEntry />
+          <Input className="border-[#ed967d]" secureTextEntry />
         </View>
-
-        <View className="my-12">
-          <Button label="Cadastar" size="lg" />
-        </View>
-
-        <Divider label="ou" />
-        <SocialMedia />
       </View>
+      <View className="my-10 px-6">
+        <Button label="Cadastar" size="lg" />
+      </View>
+      
+      <TouchableOpacity className="mb-5 items-center" onPress={() => navigation.navigate("Login")}>
+        <Text className="text-[#70BAC2]">já possui cadastro? Entre</Text>
+      </TouchableOpacity>
+
+      <Divider label="ou" />
+      <EnterWith label={"Cadastre-se com:"}/>
     </ScrollView>
   );
 }

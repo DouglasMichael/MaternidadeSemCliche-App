@@ -1,15 +1,11 @@
+import RoutesContainer from "@/routes";
 import "./global.css"
-import { Article } from "./src/app/Article";
+import Login from "./src/app/Login";
 
-import { Ebook } from "./src/app/E-book";
-import { Home } from "./src/app/Home";
-import { Profile } from "./src/app/Proflie";
+
 
 export default function App() {
   return (
-    <>
-      <Profile/>
-      {/* <Navigation/> */}
-    </>
+    <RoutesContainer/>
   );
 }
