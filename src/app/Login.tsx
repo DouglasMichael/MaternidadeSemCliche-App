@@ -34,7 +34,7 @@ export default function Login({navigation}: PropsScreensApp<'Login'>) {
       }
     } catch (erro: unknown){
       if (axios.isAxiosError(erro)) {
-        return toast(JSON.stringify(erro.response?.data.message))
+        return toast(JSON.stringify(erro.response?.data.mensagem))
       }
     }
   }
