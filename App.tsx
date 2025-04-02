@@ -1,11 +1,14 @@
 import RoutesContainer from "@/routes";
 import "./global.css"
 import Login from "./src/app/Login";
+import { ToastProvider } from "@/Components/Toast";
 
 
 
 export default function App() {
   return (
-    <RoutesContainer/>
+    <ToastProvider position="top">
+      <RoutesContainer/>
+    </ToastProvider>
   );
 }

@@ -31,9 +31,9 @@ export function Register({navigation}: PropsScreensApp<"Register">) {
           <Text className="text-[#ed967d]">Nome Completo</Text>
           <Input className="border-[#ed967d]" />
           <Text className="text-[#ed967d]">Tel(DDD)</Text>
-          <Input className="border-[#ed967d]" />
+          <Input className="border-[#ed967d]" keyboardType="number-pad"/>
           <Text className="text-[#ed967d]">Email</Text>
-          <Input className="border-[#ed967d]" />
+          <Input className="border-[#ed967d]" keyboardType="email-address"/>
           <Text className="text-[#ed967d]">Senha</Text>
           <Input className="border-[#ed967d]" secureTextEntry />
           <Text className="text-[#ed967d]">Confirmar Senha</Text>
