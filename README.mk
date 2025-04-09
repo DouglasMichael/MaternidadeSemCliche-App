@@ -1,22 +1,22 @@
 # Maternidade Sem Clichê
 
-Um aplicativo mobile desenvolvido com **React Native** que tem como objetivo oferecer uma visão real, acolhedora e sem estereótipos sobre a maternidade. Aqui, mães encontram apoio, informação e espaço para compartilhar suas experiências de forma leve, sincera e livre de clichês.
+Um aplicativo mobile desenvolvido com **React Native** que tem como objetivo apoiar a psicólogca Letícia Carazzatto, dona da página "Maternidade Sem Clichê". Aqui, mães encontram apoio, informação e formas de contactar a psicóloga e conseguir atendimento.
 
 ## ✨ Funcionalidades
 
-- 📚 Conteúdos informativos sobre maternidade sem romantização.
-- 🗣️ Espaço para relatos anônimos de mães.
+- 📚 Conteúdos informativos sobre maternidade.
+- 🗣️ Acesso à agenda da psicóloga.
 - 💡 Dicas práticas de saúde mental, autocuidado e apoio emocional.
 - 🔔 Notificações personalizadas com mensagens de acolhimento.
-- 🌙 Modo escuro para melhor conforto visual.
+- 🌙 Acesso a E-books e outros conteúdos informativos para as mais diversas fases da maternidade.
 
 ## 🛠️ Tecnologias Utilizadas
 
 - [React Native](https://reactnative.dev/)
-- [Expo](https://expo.dev/) (caso aplicável)
+- [Expo](https://expo.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) (para armazenamento local)
-- [Axios](https://axios-http.com/) (para comunicação com APIs)
+- [Axios](https://axios-http.com/) (para comunicação com APIs e SSO)
 
 ## 🚀 Como Rodar o Projeto
 
@@ -24,3 +24,9 @@ Um aplicativo mobile desenvolvido com **React Native** que tem como objetivo ofe
    ```bash
    git clone https://github.com/seu-usuario/maternidade-sem-cliche.git
    cd maternidade-sem-cliche
+2. Instale as dependências:
+   npm install
+   # ou
+   yarn install
+3. Inicie o projeto:
+   npx expo start
