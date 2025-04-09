@@ -32,4 +32,5 @@ Um aplicativo mobile desenvolvido com **React Native** que tem como objetivo apo
    npx expo start
 
 Imagens da aplicação:
+
 ![Foto 1](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/Fotos%20da%20aplica%C3%A7%C3%A3o.png)
