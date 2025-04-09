@@ -30,3 +30,6 @@ Um aplicativo mobile desenvolvido com **React Native** que tem como objetivo apo
    yarn install
 3. Inicie o projeto:
    npx expo start
+
+Imagens da aplicação:
+![Foto 1](URL_da_Imagem)
