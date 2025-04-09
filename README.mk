@@ -22,7 +22,7 @@ Um aplicativo mobile desenvolvido com **React Native** que tem como objetivo apo
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/maternidade-sem-cliche.git
+   git clone https://github.com/DouglasMichael/MaternidadeSemCliche-App.git
    cd maternidade-sem-cliche
 2. Instale as dependências:
    npm install
