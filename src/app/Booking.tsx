@@ -37,13 +37,9 @@ export function Booking({navigation}: PropsScreensApp<"Booking">) {
           </View>
         </View>
 
-        <View className="px-6 h-60 justify-evenly">
-          <View className="gap-4">
+        <View className="px-6 justify-evenly mb-8">
             <Text className="text-white">Motivo consulta</Text>
             <Input className={"border-white"} />
-            <Text className="text-white">CPF</Text>
-            <Input className="border-white" />
-          </View>
         </View>
 
         <View className="px-6 mb-2 gap-2">
@@ -65,30 +61,6 @@ export function Booking({navigation}: PropsScreensApp<"Booking">) {
           </View>
         </View>
       </ScrollView>
-
-      <View className=" flex-row items-center justify-evenly w-full h-20 bg-[#A29B94]">
-        <TouchableOpacity onPress={() => navigation.navigate("Article")}>
-          <ImageBackground
-            source={require("../assets/ArticleIcon.png")}
-            resizeMode="contain"
-            className="w-12 h-12"
-          />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
-          <ImageBackground
-            source={require("../assets/UserIcon.png")}
-            resizeMode="contain"
-            className="w-12 h-12"
-          />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <ImageBackground
-            source={require("../assets/ExitIcon.png")}
-            resizeMode="contain"
-            className="w-12 h-12"
-          />
-        </TouchableOpacity>
-      </View>
     </>
   );
 }

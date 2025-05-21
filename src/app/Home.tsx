@@ -8,11 +8,11 @@ import {
 } from "react-native";
 import { Avatar, AvatarImage } from "../Components/Avatar";
 import { PropsScreensApp } from "@/routes/interface";
-import { Navigation } from "@/Components/Navigation";
+import { useAuth } from "@/context/AuthContext";
 
 export default function Home({ navigation }: PropsScreensApp<'Home'>) {
+  const{user} = useAuth()
   return (
-    <>
       <ScrollView className="flex-1 bg-[#F5EBE0] ">
         <View className="pt-10 flex-row justify-around mb-10">
           <Image
@@ -23,7 +23,7 @@ export default function Home({ navigation }: PropsScreensApp<'Home'>) {
           <Avatar>
             <AvatarImage
               source={{
-                uri: "https://pbs.twimg.com/profile_images/1745949238519803904/ZHwM5B07_400x400.jpg",
+                uri: user?.picture ||"https://www.gravatar.com/avatar/?d=mp",
               }}
             />
           </Avatar>
@@ -70,7 +70,7 @@ export default function Home({ navigation }: PropsScreensApp<'Home'>) {
           </TouchableOpacity>
 
           <TouchableOpacity
-            className="w-96 h-48 bg-[#70BAC2] rounded-3xl flex-row"
+            className="w-96 h-48 bg-[#70BAC2] rounded-3xl flex-row mb-4"
             onPress={() => navigation.navigate("Ebook")}
           >
             <View className="w-[35%] items-center justify-center">
@@ -91,18 +91,5 @@ export default function Home({ navigation }: PropsScreensApp<'Home'>) {
           </TouchableOpacity>
         </View>
       </ScrollView>
-
-      <View className=" flex-row items-center justify-evenly w-full h-20 bg-[#A29B94]">
-            <TouchableOpacity onPress={() => navigation.navigate("Article")}>
-                <ImageBackground source={require("../assets/ArticleIcon.png")} resizeMode="contain" className="w-12 h-12"/>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
-                <ImageBackground source={require("../assets/UserIcon.png")} resizeMode="contain" className="w-12 h-12"/>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <ImageBackground source={require("../assets/ExitIcon.png")} resizeMode="contain" className="w-12 h-12"/>
-            </TouchableOpacity>
-        </View>
-    </>
   );
 }

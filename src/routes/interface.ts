@@ -1,4 +1,4 @@
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { NativeStackNavigationProp, NativeStackScreenProps } from "@react-navigation/native-stack";
 
 export type PropsStackRoutes = {
     Login: undefined;
@@ -9,7 +9,8 @@ export type PropsStackRoutes = {
     Ebook: undefined;
     Article: undefined;
     Profile: undefined;
-    Navigation: undefined;
+    Navigator: undefined;
 }
 
 export type PropsScreensApp<T extends keyof PropsStackRoutes> = NativeStackScreenProps<PropsStackRoutes, T>
+export type ScreenNavigationProp<T extends keyof PropsStackRoutes> =NativeStackNavigationProp<PropsStackRoutes, T>;

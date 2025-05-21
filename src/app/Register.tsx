@@ -10,6 +10,7 @@ import axios from "axios";
 import { useToast } from "@/Components/Toast";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
+
 export function Register({ navigation }: PropsScreensApp<"Register">) {
   const [Nome, setNome] = useState("");
   const [Cpf, setCpf] = useState("");
@@ -156,7 +157,7 @@ export function Register({ navigation }: PropsScreensApp<"Register">) {
       </TouchableOpacity>
 
       <Divider label="ou" />
-      <EnterWith label={"Cadastre-se com:"} />
+      <EnterWith label={"Cadastre-se com:"}  />
     </ScrollView>
   );
 }

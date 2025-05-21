@@ -10,6 +10,7 @@ import { useState } from "react";
 import axios, { AxiosError } from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useToast } from "@/Components/Toast";
+import { useAuth } from "@/context/AuthContext";
 
 
 
@@ -19,6 +20,7 @@ export default function Login({navigation}: PropsScreensApp<'Login'>) {
   const [Email, setemail] = useState("")
   const [Senha, setsenha] = useState("")
   const { toast } = useToast()
+  const {login} = useAuth()
 
   async function Login(){
     try{
@@ -28,9 +30,8 @@ export default function Login({navigation}: PropsScreensApp<'Login'>) {
       })
       
       if(response.status === 200){
-        await AsyncStorage.setItem('accessToken', response.data.accessToken)
-        await AsyncStorage.setItem('refreshToken', response.data.refreshToken)
-        return navigation.navigate("Home")
+        const {accessToken, refreshToken } = response.data
+        await login({accessToken, refreshToken})
       }
     } catch (erro: unknown){
       if (axios.isAxiosError(erro)) {
