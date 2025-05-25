@@ -5,6 +5,15 @@ Aplicativo mobile desenvolvido em **React Native** para apoiar a psicóloga **Le
 📲 Instagram de contato: [@maternidadesemcliche](https://www.instagram.com/maternidadesemcliche)
 
 ---
+🔧 **Requisitos do Projeto (App Frontend - React Native)**
+
+- **Node.js** 18+ (recomendado para compatibilidade com Expo)
+- **Expo SDK** ~52.0.40
+- **TypeScript** ^5.3.3
+- **React Native** 0.76.7
+- **React** 18.3.1
+
+---
 
 ## ✨ Funcionalidades
 
@@ -26,6 +35,59 @@ Aplicativo mobile desenvolvido em **React Native** para apoiar a psicóloga **Le
 
 ---
 
+📁 **Estrutura do Projeto**
+
+```
+maternidadesemcliche-app/
+├── .expo/
+├── node_modules/
+├── build/
+├── screenshots/
+├── src/
+│   ├── app/
+│   │   ├── Article.tsx
+│   │   ├── Booking.tsx
+│   │   ├── Community.tsx
+│   │   ├── E-book.tsx
+│   │   ├── Home.tsx
+│   │   ├── Login.tsx
+│   │   ├── Profile.tsx
+│   │   └── Register.tsx
+│   ├── assets/
+│   ├── Components/
+│   │   ├── Avatar.tsx
+│   │   ├── Button.tsx
+│   │   ├── Divider.tsx
+│   │   ├── Enterwith.tsx
+│   │   ├── Header.tsx
+│   │   ├── Input.tsx
+│   │   ├── Navigator.tsx
+│   │   ├── SocialMedia.tsx
+│   │   └── Toast.tsx
+│   ├── context/
+│   │   └── AuthContext.tsx
+│   ├── lib/
+│   │   └── utils.tsx
+│   └── routes/
+│       ├── AppStack.tsx
+│       ├── AuthStack.tsx
+│       ├── index.tsx
+│       └── interface.ts
+├── .gitignore
+├── app.json
+├── App.tsx
+├── babel.config.js
+├── eas.json
+├── global.css
+├── index.ts
+├── metro.config.js
+├── nativewind-env.d.ts
+├── package.json
+├── package-lock.json
+├── README.md
+├── tailwind.config.js
+└── tsconfig.json
+```
 ## 🚀 Como Rodar o Projeto
 
 ### Pré-requisitos
@@ -36,6 +98,18 @@ Aplicativo mobile desenvolvido em **React Native** para apoiar a psicóloga **Le
   ```bash
   npm install -g expo-cli
   ```
+
+🔐 **Variáveis de Ambiente**
+
+Este projeto utiliza variáveis de ambiente para configurar parâmetros de acesso. A variável **`BACK_END_URL`** é necessária para definir o URL do backend, que será utilizado pelo aplicativo React Native para se comunicar com o servidor.
+
+Crie um arquivo `.env` na raiz do seu projeto com o seguinte conteúdo:
+
+```env
+BACK_END_URL=https://seu-backend-url-aqui.com
+```
+
+Substitua `https://seu-backend-url-aqui.com` pelo URL real do seu backend. Certifique-se de que este arquivo **não seja commitado** no repositório, pois ele pode conter informações sensíveis. Para garantir isso, adicione `.env` no arquivo `.gitignore`.
 
 ### Passo a passo
 
@@ -60,18 +134,79 @@ Aplicativo mobile desenvolvido em **React Native** para apoiar a psicóloga **Le
    ```
 
 4. **Abra o app no seu dispositivo:**
-   - Instale o app [Expo Go](https://expo.dev/client) no seu smartphone (disponível para Android e iOS).
+   - Instale a build do app em seu celular no diretório **build/**.
    - Escaneie o QR Code exibido no terminal ou no navegador.
 
 ---
-
-## 📷 Imagens da Aplicação
+## 📷 Imagens da Aplicação e Fluxo de Uso
 
 Clique nas imagens para ampliá-las:
 
-[![Tela 1](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/Fotos%20da%20aplica%C3%A7%C3%A3o.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/Fotos%20da%20aplica%C3%A7%C3%A3o.png)
-  
-[![Tela 2](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/Fotos%20da%20aplica%C3%A7%C3%A3o%202.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/Fotos%20da%20aplica%C3%A7%C3%A3o%202.png)
+### 🔐 Tela de Login
+Tela inicial onde o usuário insere suas credenciais para acessar o aplicativo.
+
+[![Login](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/login.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/login.png)
+
+---
+
+### 📝 Tela de Cadastro
+Permite que novos usuários criem uma conta informando nome, email, senha e telefone.
+
+[![Cadastro](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20cadastro.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20cadastro.png)
+
+---
+
+### 🔒 Esqueci minha Senha - Etapas de Recuperação
+Processo de redefinição de senha dividido em etapas:
+1. Inserir email
+2. Inserir código de verificação
+3. Trocar senha
+
+[![Esqueci Senha - Email](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/Tela%20esqueceu%20senha-%20add%20email%20valido.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/Tela%20esqueceu%20senha-%20add%20email%20valido.png)  
+[![Esqueci Senha - Código](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueceu%20senha%20-%20esperando%20codigo.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueceu%20senha%20-%20esperando%20codigo.png)  
+[![Esqueci Senha - Trocar Senha](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueci%20senha%20-%20trocar%20senha.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueci%20senha%20-%20trocar%20senha.png)
+
+---
+
+### 🏠 Tela Home
+Tela principal após o login, com destaques e atalhos para os recursos do app.
+
+[![Home](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/home.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/home.png)
+
+---
+
+### 📚 Tela de Conteúdo e Artigos
+Lista de artigos e conteúdos informativos sobre maternidade, psicologia e bem-estar.
+
+[![Artigos](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20conteudo%20e%20artigos.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20conteudo%20e%20artigos.png)
+
+---
+
+### 📘 Tela de E-books
+Visualização e acesso a materiais em formato de e-book para leitura.
+
+[![E-books](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20e-book.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20e-book.png)
+
+---
+
+### 👥 Tela de Grupos de Apoio
+Exibe grupos disponíveis para troca de experiências e suporte entre mães.
+
+[![Grupos](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20grupos%20de%20apoio.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20grupos%20de%20apoio.png)
+
+---
+
+### 📅 Tela de Agendar Consulta
+Permite que a usuária agende consultas com profissionais disponíveis.
+
+[![Agendar Consulta](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20agendar%20consulta.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20agendar%20consulta.png)
+
+---
+
+### 🙍 Tela de Usuário / Perfil
+Informações pessoais do usuário, com opções de edição e visualização.
+
+[![Usuário](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20usuario.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20usuario.png)
 
 ---
 
