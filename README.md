@@ -140,8 +140,6 @@ Substitua `https://seu-backend-url-aqui.com` pelo URL real do seu backend. Certi
 ---
 ## 📷 Imagens da Aplicação e Fluxo de Uso
 
-Clique nas imagens para ampliá-las:
-
 ### 🔐 Tela de Login
 Tela inicial onde o usuário insere suas credenciais para acessar o aplicativo.
 
@@ -152,7 +150,7 @@ Tela inicial onde o usuário insere suas credenciais para acessar o aplicativo.
 ### 📝 Tela de Cadastro
 Permite que novos usuários criem uma conta informando nome, email, senha e telefone.
 
-[![Cadastro](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20cadastro.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20cadastro.png)
+[![Cadastro](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaDeCadastro.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaDeCadastro.png)
 
 ---
 
@@ -162,9 +160,9 @@ Processo de redefinição de senha dividido em etapas:
 2. Inserir código de verificação
 3. Trocar senha
 
-[![Esqueci Senha - Email](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/Tela%20esqueceu%20senha-%20add%20email%20valido.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/Tela%20esqueceu%20senha-%20add%20email%20valido.png)  
-[![Esqueci Senha - Código](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueceu%20senha%20-%20esperando%20codigo.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueceu%20senha%20-%20esperando%20codigo.png)  
-[![Esqueci Senha - Trocar Senha](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueci%20senha%20-%20trocar%20senha.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20esqueci%20senha%20-%20trocar%20senha.png)
+[![Esqueci Senha - Email](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaEsqueceuSenhaEmailRecuperacao.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaEsqueceuSenhaEmailRecuperacao.png)  
+[![Esqueci Senha - Código](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaEsqueceuSenhaEsperandoVerificar.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaEsqueceuSenhaEsperandoVerificar.png)  
+[![Esqueci Senha - Trocar Senha](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaEsqueceuSenhaTrocarSenha.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaEsqueceuSenhaTrocarSenha.png)
 
 ---
 
@@ -178,35 +176,35 @@ Tela principal após o login, com destaques e atalhos para os recursos do app.
 ### 📚 Tela de Conteúdo e Artigos
 Lista de artigos e conteúdos informativos sobre maternidade, psicologia e bem-estar.
 
-[![Artigos](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20conteudo%20e%20artigos.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20conteudo%20e%20artigos.png)
+[![Artigos](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaConteudoEArtigos.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/TelaConteudoEArtigos.png)
 
 ---
 
 ### 📘 Tela de E-books
 Visualização e acesso a materiais em formato de e-book para leitura.
 
-[![E-books](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20e-book.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20e-book.png)
+[![E-books](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaDeEbook.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaDeEbook.png)
 
 ---
 
 ### 👥 Tela de Grupos de Apoio
 Exibe grupos disponíveis para troca de experiências e suporte entre mães.
 
-[![Grupos](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20grupos%20de%20apoio.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20grupos%20de%20apoio.png)
+[![Grupos](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaDeGruposDeApoio.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaDeGruposDeApoio.png)
 
 ---
 
 ### 📅 Tela de Agendar Consulta
 Permite que a usuária agende consultas com profissionais disponíveis.
 
-[![Agendar Consulta](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20agendar%20consulta.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20agendar%20consulta.png)
+[![Agendar Consulta](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaAgendarConsulta.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaAgendarConsulta.png)
 
 ---
 
 ### 🙍 Tela de Usuário / Perfil
 Informações pessoais do usuário, com opções de edição e visualização.
 
-[![Usuário](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20usuario.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/tela%20de%20usuario.png)
+[![Usuário](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaDeUsuario.png)](https://github.com/DouglasMichael/MaternidadeSemCliche-App/blob/master/screenshots/telaDeUsuario.png)
 
 ---
 
