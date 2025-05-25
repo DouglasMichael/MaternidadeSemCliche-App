@@ -3,6 +3,7 @@
 Aplicativo mobile desenvolvido em **React Native** para apoiar a psicóloga **Letícia Carazzatto**, criadora da página _Maternidade Sem Clichê_. O app oferece apoio emocional, informações relevantes e acesso facilitado à profissional para mães em diferentes fases da maternidade.
 
 📲 Instagram de contato: [@maternidadesemcliche](https://www.instagram.com/maternidadesemcliche)
+
 🎨 Figma do Projeto: [MaternidadeSemCliche](https://www.figma.com/design/eLb0sfW8rZJgSc3XAG2oMc/MaternidadeSemCliche?node-id=72-195&t=na4PzEm4qGNHmlrT-1)
 
 ---
