@@ -45,6 +45,7 @@ export function Booking({navigation}: PropsScreensApp<"Booking">) {
         <View className="px-6 mb-2 gap-2">
           <Text className="text-white">Data consulta</Text>
           <Calendar
+            minDate ={new Date().toISOString().split("T")[0]}
             onDayPress={(day: { dateString: SetStateAction<string> }) => {
               setSelected(day.dateString);
             }}
