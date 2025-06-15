@@ -11,6 +11,7 @@ import axios, { AxiosError } from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useToast } from "@/Components/Toast";
 import { useAuth } from "@/context/AuthContext";
+import api from "@/lib/api";
 
 
 
@@ -24,7 +25,7 @@ export default function Login({navigation}: PropsScreensApp<'Login'>) {
 
   async function Login(){
     try{
-      const response = await axios.post("http://192.168.15.22:3000/login/", {
+      const response = await api.post("/login", {
         email: Email,
         senha: Senha
       })
@@ -57,7 +58,7 @@ export default function Login({navigation}: PropsScreensApp<'Login'>) {
           <Text className="text-[#ed967d]">Password</Text>
           <Input secureTextEntry className={"border-[#ed967d]"} onChangeText={(text) => setsenha(text)} value={Senha} />
         </View>
-        <TouchableOpacity className="items-end">
+        <TouchableOpacity className="items-end" onPress={() => navigation.navigate("ForgotPassword")}>
           <Text className="text-[#70BAC2]">Esqueceu a senha? Clique aqui</Text>
         </TouchableOpacity>
 

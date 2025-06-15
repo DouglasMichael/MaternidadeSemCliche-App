@@ -2,6 +2,8 @@ import React, { createContext, useContext, useState, useEffect, ReactNode, Child
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { GoogleSignin} from "@react-native-google-signin/google-signin";
 import axios from "axios";
+import api from "@/lib/api";
+
 
 type user ={
     nome: string;
@@ -37,7 +39,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
 
             if (accessToken && refreshToken) {
                 try{
-                    const response = await axios.post("http://192.168.15.22:3000/token", {
+                    const response = await api.post("/token", {
                         accessToken:accessToken,
                         refreshToken: refreshToken
                     })
@@ -51,7 +53,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
                 }
             } else if (tokenGoogle) {
                 try{
-                    const response = await axios.post("http://192.168.15.22:3000/tokenGoogle", {
+                    const response = await api.post("/tokenGoogle", {
                         tokenID: tokenGoogle
                     })
 
@@ -74,7 +76,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
         await AsyncStorage.setItem('accessToken', accessToken)
         await AsyncStorage.setItem('refreshToken', refreshToken)
 
-        const response = await axios.post("http://192.168.15.22:3000/token", {
+        const response = await api.post("/token", {
             accessToken:accessToken,
             refreshToken: refreshToken
         })
@@ -87,7 +89,7 @@ export function AuthProvider({children}: {children: ReactNode}) {
             await AsyncStorage.setItem('tokenGoogle', tokenGoogle)
         }
 
-        const response = await axios.post("http://192.168.15.22:3000/tokenGoogle", {
+        const response = await api.post("/tokenGoogle", {
             tokenID: tokenGoogle
         })
 

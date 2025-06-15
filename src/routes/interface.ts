@@ -3,6 +3,9 @@ import { NativeStackNavigationProp, NativeStackScreenProps } from "@react-naviga
 export type PropsStackRoutes = {
     Login: undefined;
     Register: undefined;
+    ForgotPassword: undefined;
+    VerifyCode: undefined;
+    ChangePassword: undefined;
     Home: undefined;
     Booking: undefined;
     Community: undefined;

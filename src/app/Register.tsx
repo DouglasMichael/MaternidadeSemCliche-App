@@ -9,6 +9,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useToast } from "@/Components/Toast";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import api from "@/lib/api";
+
 
 
 export function Register({ navigation }: PropsScreensApp<"Register">) {
@@ -49,7 +51,7 @@ export function Register({ navigation }: PropsScreensApp<"Register">) {
     }
 
     try {
-      const response = await axios.post("http://192.168.15.22:3000/register", {
+      const response = await api.post("/register", {
         nome: Nome,
         email: Email,
         senha: Senha,
