@@ -4,8 +4,8 @@ export type PropsStackRoutes = {
     Login: undefined;
     Register: undefined;
     ForgotPassword: undefined;
-    VerifyCode: undefined;
-    ChangePassword: undefined;
+    VerifyCode: { email: string };
+    ChangePassword: { email: string };
     Home: undefined;
     Booking: undefined;
     Community: undefined;

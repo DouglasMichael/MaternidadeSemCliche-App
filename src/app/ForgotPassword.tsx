@@ -23,21 +23,19 @@ export default function ForgotPassword({navigation}: PropsScreensApp<'ForgotPass
   const {login} = useAuth()
 
   async function SendEmail(){
-    navigation.navigate("VerifyCode")
-    // try{
-    //   const response = await api.post("/login", {
-    //     email: Email,
-    //   })
+    try{
+      const response = await api.post("/esqueciSenha/enviarEmail", {
+        to: Email,
+      })
       
-    //   if(response.status === 200){
-    //     const {accessToken, refreshToken } = response.data
-    //     navigation.navigate("VerifyCode")
-    //   }
-    // } catch (erro: unknown){
-    //   if (axios.isAxiosError(erro)) {
-    //     return toast(JSON.stringify(erro.response?.data.mensagem))
-    //   }
-    // }
+      if(response.status === 200){
+        navigation.navigate("VerifyCode", {email: Email})
+      }
+    } catch (erro: unknown){
+      if (axios.isAxiosError(erro)) {
+        return toast(JSON.stringify(erro.response?.data.mensagem))
+      }
+    }
   }
 
   return (

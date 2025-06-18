@@ -16,28 +16,29 @@ import api from "@/lib/api";
 
 
 
-export default function VerifyCode({navigation}: PropsScreensApp<'VerifyCode'>) {
-
+export default function VerifyCode({navigation, route}: PropsScreensApp<'VerifyCode'>) {
+  const {email} = route.params
   const [code, setcode] = useState("")
   const { toast } = useToast()
   const {login} = useAuth()
 
   async function SendCode(){
-    navigation.navigate("ChangePassword")
-    // try{
-    //   const response = await api.post("/login", {
-    //     code: code,
-    //   })
+    try{
+      console.log(email)
+      const response = await api.post("/esqueciSenha/codigoVerificacao", {
+        to: email,
+        code: code
+      })
       
-    //   if(response.status === 200){
-    //     const {accessToken, refreshToken } = response.data
-    //     await login({accessToken, refreshToken})
-    //   }
-    // } catch (erro: unknown){
-    //   if (axios.isAxiosError(erro)) {
-    //     return toast(JSON.stringify(erro.response?.data.mensagem))
-    //   }
-    // }
+      if(response.status === 200){
+        navigation.navigate("ChangePassword", {email: email})
+      }
+      
+    } catch (erro: unknown){
+      if (axios.isAxiosError(erro)) {
+        return toast(JSON.stringify(erro.response?.data.mensagem))
+      }
+    }
   }
 
   return (
